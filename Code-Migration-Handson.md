@@ -21,14 +21,15 @@ module show adios2/2.7.1
 
 ### Command Set #2 ###
 <br>
-In this part of the hands on section, we will copy over a PyTorch example from the Expanse examples directory and run it. This example uses a PyTorch Singularity image for the software environment.
+In this part of the hands on section, we will launch a Jupyterlab instance using Galyleo. The python environment will be in a conda install that is dynamically set up based on an environment yaml file (environment.yml). We will use the mamba and caching option to allow for reuse.
 
 ```
-cp -r /cm/shared/examples/sdsc/pytorch .
-cd pytorch
-sbatch -A gue998 run-pytorch-cpu-shared.sh
+galyleo launch --account abc123 --partition shared --cpus 4 --memory 8 --time-limit 00:30:00 --conda-yml environment.yml --mamba --cache
 ```
-Once this job runs, check the output file!
+In above command change abc123 to your own allocation ID. Once this command runs, a job will be submitted to the queue and a unique dynamic URL provided to you in the output. Use that URL to access the Jupyterlab instance. Within the instance try out matplotlib (which is one of the installs) with an example (https://matplotlib.org/stable/gallery/lines_bars_and_markers/axline.html). Once you are done, shutdown the jupyter instance. Go to the following location:
+```
+$HOME
+```
 
 ### Command Set #3 ###
 <br> 
