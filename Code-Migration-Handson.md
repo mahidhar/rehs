@@ -21,16 +21,16 @@ module show adios2/2.7.1
 
 ### Command Set #2 ###
 <br>
-In this part of the hands on section, we will launch a Jupyterlab instance using Galyleo. The python environment will be in a conda install that is dynamically set up based on an environment yaml file (environment.yml). We will use the mamba and caching option to allow for reuse.
+In this part of the hands on section, we will launch a Jupyterlab instance using Galyleo. The python environment will be in a conda install that is dynamically set up based on an environment yaml file (environment.yml). 
 
 ```
 galyleo launch --account abc123 --partition shared --cpus 4 --memory 8 --time-limit 00:30:00 --conda-yml environment.yml --mamba --cache
 ```
 In above command change abc123 to your own allocation ID. Once this command runs, a job will be submitted to the queue and a unique dynamic URL provided to you in the output. Use that URL to access the Jupyterlab instance. Within the instance try out matplotlib (which is one of the installs) with an example (https://matplotlib.org/stable/gallery/lines_bars_and_markers/axline.html). Once you are done, shutdown the jupyter instance. Go to the following location:
 ```
-$HOME/.galyleo/notebooks-sharing
+$HOME/.galyleo
 ```
-Do you see the packed up conda distribution? You can try running another job with the same parameters and see if it works!
+Do you see the output file from the galyleo session? See what was installed!
 
 ### Command Set #3 ###
 <br> 
