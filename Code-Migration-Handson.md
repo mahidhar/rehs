@@ -28,8 +28,9 @@ galyleo launch --account abc123 --partition shared --cpus 4 --memory 8 --time-li
 ```
 In above command change abc123 to your own allocation ID. Once this command runs, a job will be submitted to the queue and a unique dynamic URL provided to you in the output. Use that URL to access the Jupyterlab instance. Within the instance try out matplotlib (which is one of the installs) with an example (https://matplotlib.org/stable/gallery/lines_bars_and_markers/axline.html). Once you are done, shutdown the jupyter instance. Go to the following location:
 ```
-$HOME
+$HOME/.galyleo/notebooks-sharing
 ```
+Do you see the packed up conda distribution? You can try running another job with the same parameters and see if it works!
 
 ### Command Set #3 ###
 <br> 
