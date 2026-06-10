@@ -24,7 +24,7 @@ module show adios2/2.7.1
 In this part of the hands on section, we will launch a Jupyterlab instance using Galyleo. The python environment will be in a conda install that is dynamically set up based on an environment yaml file (environment.yml). 
 
 ```
-galyleo launch --account abc123 --partition shared --cpus 4 --memory 8 --time-limit 00:30:00 --conda-yml environment.yml --mamba --cache
+galyleo launch --account abc123 --partition shared --cpus 4 --memory 8 --time-limit 00:30:00 --conda-yml environment.yml 
 ```
 In above command change abc123 to your own allocation ID. Once this command runs, a job will be submitted to the queue and a unique dynamic URL provided to you in the output. Use that URL to access the Jupyterlab instance. Within the instance try out matplotlib (which is one of the installs) with an example (https://matplotlib.org/stable/gallery/lines_bars_and_markers/axline.html). Once you are done, shutdown the jupyter instance. Go to the following location:
 ```
