@@ -38,7 +38,7 @@ In this example we first get interactive access to a compute node:
 
 ```
 module reset
-srun --pty --partition=shared --nodes=1 --ntasks-per-node=1 --cpus-per-task=8 --mem=16G -A gue998 -t 00:30:00 --wait 0 /bin/bash
+srun --pty --partition=shared --nodes=1 --ntasks-per-node=1 --cpus-per-task=8 --mem=16G -A abc123 -t 00:30:00 --wait 0 /bin/bash
 ```
 Next we set the temporary directory to the node local NVMe scratch directory and change to that directory.
 
