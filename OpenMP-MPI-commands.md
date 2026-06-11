@@ -1,3 +1,10 @@
+Copy the files for the hands on:
+
+```
+cp -r /expanse/projects/qstore/use300/rehs $HOME/
+cd $HOME/rehs
+```
+
 ### Command Set #1 ###
 <br>
 OpenMP Example
